@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d98fb34-4d2b-4007-8825-23083a176a57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snake.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/lb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/quit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/CollisionDetector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/GameEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/HighScoreManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/RoundedButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Snake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/SnakeFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/SnakePanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="5d98fb34-4d2b-4007-8825-23083a176a57" name="Changes" comment="Updated gui and finished javadocs and loggers." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -43,8 +21,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/game/core/Food.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="src" pattern="src:game.*||src:game.core.*||src:game.gui.*||src:game.utils.*||src:resources.data.*||src:resources.images.*" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -55,31 +39,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/rovin/IdeaProjects/tetris",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rovin/IdeaProjects/snake/src/game/gui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="game" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rovin\IdeaProjects\snake\src\game\gui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rovin\IdeaProjects\snake\src\resources\data" />
+      <recent name="C:\Users\rovin\IdeaProjects\snake\src\resources\images" />
       <recent name="C:\Users\rovin\IdeaProjects\snake\src\data" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="snake" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="game.SnakeFrame" />
+      <option name="MAIN_CLASS_NAME" value="game.gui.SnakeFrame" />
       <module name="snake" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,11 +89,60 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711641022060</updated>
-      <workItem from="1711641023736" duration="23372000" />
+      <workItem from="1711641023736" duration="61145000" />
+      <workItem from="1711910383416" duration="15920000" />
+      <workItem from="1711941371468" duration="4733000" />
+      <workItem from="1712006170412" duration="10558000" />
+      <workItem from="1712172729448" duration="785000" />
+      <workItem from="1712173673486" duration="976000" />
+      <workItem from="1712175182566" duration="8853000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1711824973142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711824973142</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Extended logic + Javadocs + Logger">
+      <created>1712017338733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712017338733</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated gui and finished javadocs and loggers.">
+      <created>1712185449867</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712185449867</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Extended logic + Javadocs + Logger" />
+    <MESSAGE value="Updated gui and finished javadocs and loggers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated gui and finished javadocs and loggers." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package game.core;
 
 import game.LoggerSetup;
+import game.utils.Constants;
 import game.utils.Direction;
 
 import java.awt.Point;
@@ -47,18 +48,12 @@ public class Snake {
     private Point oldTail;
 
     /**
-     * Initializes a {@code snake} in a game ready state by creating a list of points to represent the {@code body}
-     * and setting its starting direction.
-     * @param startPosition The initial position of the head of the {@code snake}. Must not be {@code null}.
-     * @param initialLength The initial length of the {@code snake}. Must be positive and fit within the grid given
-     *                      the {@code startPosition}.
-     * @throws IllegalArgumentException if {@code startPosition} is {@code null} or if the {@code initialLength} is
-     *                                  non-positive or too long to fit given the specified {@code startPosition}.
-     *                                  This exception is caught and logged at {@code Level.SEVERE}.
+     * Initializes a {@code snake} in a game ready state based on the values in the {@link Constants} class by creating
+     * a list of points to represent the {@code body} and setting its starting direction.
      */
-    Snake(Point startPosition, int initialLength) {
-        // validate the parameters
-        validateConstructor(startPosition, initialLength);
+    Snake() {
+        Point startPosition = Constants.SNAKE_INITIAL_POSITION;
+        int initialLength = Constants.SNAKE_INITIAL_LENGTH;
         // init the body arraylist
         body = new ArrayList<>();
         // add the start position as the head
@@ -172,7 +167,7 @@ public class Snake {
             direction = nextDirection;
             nextDirection = bufferDirection;
             bufferDirection = null;
-            LOGGER.fine("Snake changed direction to " + direction + ".");
+            LOGGER.finest("Snake changed direction to " + direction + ".");
         }
     }
 
@@ -192,32 +187,5 @@ public class Snake {
      */
     public List<Point> getSnake() {
         return body;
-    }
-
-    /**
-     * Validates the values passed in to the {@code Snake} constructor
-     *
-     * @hidden
-     * @param startPosition The initial position of the head of the {@code snake}.
-     * @param initialLength The initial length of the {@code snake}.
-     * @throws IllegalArgumentException if {@code startPosition} is {@code null} or if the {@code initialLength} is
-     *                                  non-positive or too long to fit given the specified {@code startPosition}.
-     *                                  The initial length is too long if it is greater than the startPosition's x + 1.
-     *                                  This exception is caught and logged at {@code Level.SEVERE}.
-     */
-    private void validateConstructor(Point startPosition, int initialLength) {
-        if(startPosition == null) {
-            LOGGER.severe("startPosition passed into Snake constructor was null");
-            throw new IllegalArgumentException("startPosition must not be null");
-        }
-        if(initialLength <= 0) {
-            LOGGER.severe("initialLength passed into Snake constructor was non-positive");
-            throw new IllegalArgumentException("initialLength must be positive");
-        }
-        if(initialLength > startPosition.x + 1) {
-            LOGGER.severe("initialLength was too long for startPosition");
-            throw new IllegalArgumentException("initialLength must be less than or " +
-                                                "equal to the startPosition.x + 1");
-        }
     }
 }

@@ -62,8 +62,8 @@ public class GameEngine {
      */
     public void startGame() {
         isRunning = true;
-        snake = new Snake(Constants.SNAKE_INITIAL_POSITION, Constants.SNAKE_INITIAL_LENGTH);
-        food = new Food(Constants.FOOD_INITIAL_POSITION, snake);
+        snake = new Snake();
+        food = new Food(snake);
         cd = new CollisionDetector(snake, food);
         score = 0;
         timer.start();

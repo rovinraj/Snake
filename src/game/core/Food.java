@@ -32,19 +32,17 @@ public class Food {
     private final Snake snake;
 
     /**
-     * Creates {@code Food} at a {@code Point} specified location.
-     * @param initialPos The initial position of the food. Must not be {@code null} and must be within the grid's bounds.
+     * Creates the initial {@code Food} object based off the {@link Constants} file.
      * @param snake A reference to the current snake object. Must not be {@code null}.
-     * @throws IllegalArgumentException if {@code initialPos} is {@code null} or is outside the grid's range or if the
-     *                                  {@code snake} is null.
+     * @throws IllegalArgumentException if the {@code snake} is null.
      *                                  This exception is caught and logged at {@code Level.SEVERE}.
      */
-    Food(Point initialPos, Snake snake) {
-        validateConstructor(initialPos, snake);
+    Food(Snake snake) {
+        validateConstructor(snake);
         this.snake = snake;
         rand = new Random();
-        position = initialPos;
-        LOGGER.config("Food created at: [x=" + initialPos.x + ", y=" + initialPos.y + "]");
+        position = Constants.FOOD_INITIAL_POSITION;
+        LOGGER.config("Food created at: [x=" + position.x + ", y=" + position.y + "]");
     }
 
     /**
@@ -74,23 +72,11 @@ public class Food {
      * Validates the values passed in to the food constructor
      *
      * @hidden
-     * @param initialPos The initial position of the food.
      * @param snake A reference to the current snake object.
-     * @throws IllegalArgumentException if {@code initialPos} is {@code null} or is outside the grid's range or if the
-     *                                  {@code snake} is null.
+     * @throws IllegalArgumentException if the {@code snake} is null.
      *                                  This exception is caught and logged at {@code Level.SEVERE}.
      */
-    private void validateConstructor(Point initialPos, Snake snake) {
-        if(initialPos == null) {
-            LOGGER.severe("initialPos passed into Food constructor was null.");
-            throw new IllegalArgumentException("initialPos must not be null");
-        }
-        if(initialPos.x < 0 || initialPos.x >= Constants.NUM_COLS ||
-                initialPos.y < 0 || initialPos.y >= Constants.NUM_ROWS) {
-            LOGGER.severe("initialPos passed into Food constructor was not within the correct range.");
-            throw new IllegalArgumentException("initialPos must be within the range " +
-                    "x:[0, " + Constants.NUM_COLS + "), y:[0, " + Constants.NUM_ROWS + ")");
-        }
+    private void validateConstructor(Snake snake) {
         if(snake == null) {
             LOGGER.severe("snake passed into the Food constructor was null.");
             throw new IllegalArgumentException("snake must not be null");
